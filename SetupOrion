@@ -5763,7 +5763,7 @@ services:
 ## --------------------------- ORION --------------------------- ##
 
   evolution${1:+_$1}_api:
-    image: evoapicloud/evolution-api:latest ## Versão da Evolution API
+    image: evoapicloud/evolution-api:v2.2.3 ## Versão da Evolution API
 
     volumes:
       - evolution${1:+_$1}_instances:/evolution/instances
@@ -5778,7 +5778,7 @@ services:
       - AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
       - DEL_INSTANCE=false
       - QRCODE_LIMIT=1902
-      - LANGUAGE=pt-BR
+      - LANGUAGE=en-US
       
       ## 📱 Configuração do Cliente
       ## Pegue a versão em: https://web.whatsapp.com/sw.js
@@ -5843,7 +5843,7 @@ services:
       - WA_BUSINESS_TOKEN_WEBHOOK=evolution
       - WA_BUSINESS_URL=https://graph.facebook.com
       - WA_BUSINESS_VERSION=v21.0
-      - WA_BUSINESS_LANGUAGE=pt_BR
+      - WA_BUSINESS_LANGUAGE=en_US
 
       ## 📊 Telemetria
       - TELEMETRY=false
